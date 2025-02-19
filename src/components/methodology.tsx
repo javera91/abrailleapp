@@ -8,7 +8,7 @@ const Methodology: React.FC = () => {
     <div className="section-container">
       <h1 className="section-title">Metodología</h1>
       <p className="section-paragraph">
-        La investigación se llevó a cabo utilizando la metodología <strong>Design Thinking</strong>, un enfoque centrado en el usuario que promueve la innovación a través de la comprensión profunda de las necesidades y desafíos de los usuarios finales. Esta metodología consta de varias fases que permiten iterar y mejorar continuamente el diseño del producto.
+      Para el desarrollo de la presente investigación se utilizó la metodología de investigación aplicada, con un enfoque en la metodología de desarrollo Design Thinking, lo que permitió una comprensión centrada en el usuario y una optimización adecuada del dispositivo electrónico.
       </p>
       
       <h2 className="subsection-title">Fases de la Metodología</h2>
@@ -45,10 +45,6 @@ const Methodology: React.FC = () => {
         </tbody>
       </table>
 
-      <h2 className="subsection-title">Resultados de la Metodología</h2>
-      <p className="section-paragraph">
-        La implementación de la metodología Design Thinking ha permitido un enfoque iterativo que asegura que el dispositivo final responda a las necesidades reales de los usuarios. Los resultados obtenidos durante las pruebas iniciales indican que AlphaBraille no solo es efectivo en la enseñanza del Braille, sino que también aumenta la motivación de los usuarios al aprender.
-      </p>
       <div className="button-container">
         <Link to="/research" className="back-button">⬅ Volver a Investigación</Link>
       </div>

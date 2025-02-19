@@ -16,7 +16,6 @@ html, body, #root {
   flex-direction: column;
   height: 100%; /* Asegura que el contenedor principal ocupe todo el alto disponible */
   width: 100%;  /* Asegura que el contenedor principal ocupe todo el ancho disponible */
-  padding: 0 20px; /* Margen lateral para contenido centrado */
   background-color: #f0f0f5; /* Fondo gris plomo para todo el contenedor */
   box-sizing: border-box; /* Incluye el padding dentro del tamaño total */
 }

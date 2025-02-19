@@ -7,11 +7,14 @@ const Results: React.FC = () => {
     <div className="section-container">
       <h1 className="section-title">Resultados</h1>
       <p className="section-paragraph">
-        Se llevaron a cabo pruebas piloto con usuarios de distintas edades y diferentes tiempos de uso.
-        Los resultados indican que a mayor tiempo de uso del dispositivo, se logra una mayor cantidad de letras.
-        Sin embargo, la efectividad del dispositivo puede variar según las características personales de cada usuario.
+      Para validar la efectividad de la versión optimizada de AlphaBraille, 
+      se realizó una prueba en la Asociación ANVIZSUC con la participación de 
+      dos docentes, del coordinador. Antes de la evaluación, se llevó a cabo 
+      una inducción sobre el propósito, funcionamiento y mejoras del dispositivo. 
+      Los participantes expresaron su consentimiento para la prueba y evaluaron 
+      su desempeño en el aprendizaje de la escritura del alfabeto Braille.
       </p>
-      <table className="results-table">
+      {/*<table className="results-table">
         <thead>
           <tr>
             <th>Participante</th>
@@ -40,13 +43,15 @@ const Results: React.FC = () => {
             <td>5</td>
           </tr>
         </tbody>
-      </table>
+      </table>*/}
       <p className="section-paragraph">
-        A continuación, se presenta una gráfica que ilustra el progreso de cada participante en función del
-        tiempo de uso del dispositivo. La gráfica muestra que, aunque la mayoría de los participantes mejoraron,
-        la efectividad puede ser inconsistente.
+      A continuación, se presenta una tabla comparativa con criterios clave para medir 
+      la aceptación y funcionalidad del dispositivo, considerando aspectos como facilidad 
+      de uso, utilidad pedagógica y retroalimentación auditiva. La evaluación se realizó 
+      mediante una escala cualitativa con tres niveles: Alta, Media y Baja, reflejando 
+      el grado de satisfacción y efectividad percibida en cada criterio.
       </p>
-      <img src="/src/assets/grafica.png" alt="Gráfica de radar de resultados" className="responsive-image" />
+      <img src="/src/assets/graf_resultados.png" alt="Gráfica de radar de resultados" className="responsive-image" />
 
       <div className="button-container">
         <Link to="/research" className="back-button">⬅ Volver a Investigación</Link>

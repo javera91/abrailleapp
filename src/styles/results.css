@@ -36,8 +36,7 @@
 
 /* Estilo para las imágenes responsivas */
 .responsive-image {
-  max-width: 100%; /* Asegura que la imagen se adapte a la pantalla */
-  height: auto; /* Mantiene la proporción de la imagen */
+  width: 50%;
   margin: 20px 0; /* Espaciado entre la imagen y otros elementos */
   border-radius: 8px; /* Bordes suavizados en la imagen */
 }

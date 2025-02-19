@@ -19,7 +19,7 @@ const Header: React.FC = () => {
   return (
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="logo">
-        <img src="src\assets\logo_black.png" alt="" />
+        <img src="src\assets\logo_white.png" alt="" />
         
       </div>
 
@@ -57,14 +57,6 @@ const Header: React.FC = () => {
               className={({ isActive }) => (isActive ? 'active' : '')}
             >
               Equipo
-            </NavLink>
-          </li>
-          <li>
-            <NavLink 
-              to="/contact" 
-              className={({ isActive }) => (isActive ? 'active' : '')}
-            >
-              Contacto
             </NavLink>
           </li>
         </ul>

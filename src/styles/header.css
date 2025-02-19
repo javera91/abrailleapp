@@ -1,102 +1,104 @@
 /* src/styles/Header.css */
 
 .header {
-    position: sticky;
-    top: 0;
-    backdrop-filter: blur(10px);
-    background-color: rgba(0, 51, 102, 0.9); /* Azul translúcido */
-    display: flex;
-    flex-direction: column; /* Para apilar el logo y el menú */
-    align-items: center;
-    padding: 20px 0;
-    z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease;
-  }
-  
-  .header.scrolled {
-    background-color: rgba(0, 41, 82, 0.95);
-    transform: translateY(-5px);
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    transition: transform 0.3s;
-    margin-bottom: 10px; /* Espacio entre el logo y el menú */
-  }
-  
-  .logo img {
-    width: 150px; /* Mantener grande como título */
-    height: auto;
-    object-fit: contain;
-  }
-  
-  .logo:hover {
-    transform: scale(1.1);
-  }
-  
+  position: sticky;
+  top: 0;
+  left: 0; /* Asegura que el header comience desde el borde izquierdo */
+  width: 100vw; /* Ocupa todo el ancho de la pantalla */
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 51, 102, 0.9); /* Azul translúcido */
+  display: flex;
+  flex-direction: column; /* Para apilar el logo y el menú */
+  align-items: center;
+  padding: 20px 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease;
+}
+
+.header.scrolled {
+  background-color: rgba(0, 41, 82, 0.95);
+  transform: translateY(-5px);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+  margin-bottom: 10px; /* Espacio entre el logo y el menú */
+}
+
+.logo img {
+  width: 150px; /* Mantener grande como título */
+  height: auto;
+  object-fit: contain;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #007bff; /* Azul brillante */
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  transition: width 0.4s ease-in-out;
+}
+
+nav a:hover::after {
+  width: 80%;
+}
+
+nav a:hover {
+  color: #007bff;
+  transform: scale(1.1);
+}
+
+nav a.active {
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+}
+
+/* Menú hamburguesa */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle div {
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
   nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px;
-    position: relative;
-    transition: color 0.3s ease, transform 0.3s ease;
-  }
-  
-  nav a::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background: #007bff; /* Azul brillante */
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    transition: width 0.4s ease-in-out;
-  }
-  
-  nav a:hover::after {
-    width: 80%;
-  }
-  
-  nav a:hover {
-    color: #007bff;
-    transform: scale(1.1);
-  }
-  
-  nav a.active {
-    color: #007bff;
-    border-bottom: 2px solid #007bff;
-  }
-  
-  /* Menú hamburguesa */
-  .menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
-  }
-  
-  .menu-toggle div {
-    width: 25px;
-    height: 3px;
-    background-color: #ffffff;
-    transition: all 0.3s ease;
-  }
-  
-  @media (max-width: 768px) {
-    nav ul {
       display: none;
       flex-direction: column;
       background-color: rgba(0, 41, 82, 0.95);
@@ -106,25 +108,25 @@
       padding: 15px;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-    }
-  
-    nav ul.show {
-      display: flex;
-    }
-  
-    .menu-toggle {
-      display: flex;
-    }
-  
-    .menu-toggle.active div:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
-    }
-  
-    .menu-toggle.active div:nth-child(2) {
-      opacity: 0;
-    }
-  
-    .menu-toggle.active div:nth-child(3) {
-      transform: rotate(-45deg) translate(5px, -5px);
-    }
   }
+
+  nav ul.show {
+      display: flex;
+  }
+
+  .menu-toggle {
+      display: flex;
+  }
+
+  .menu-toggle.active div:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-toggle.active div:nth-child(2) {
+      opacity: 0;
+  }
+
+  .menu-toggle.active div:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+  }
+}

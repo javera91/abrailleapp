@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom
 import Home from './pages/home';
 import Research from './pages/research';
 import Team from './pages/team';
-import Contact from './pages/contact';
 import Introduction from './components/introduction';
 import Methodology from './components/methodology';
 import Results from './components/results';
@@ -31,7 +30,6 @@ const App: React.FC = () => {
               <Route path="references" element={<References />} />
             </Route>
             <Route path="/team" element={<Team />} />
-            <Route path="/contact" element={<Contact />} />
           </Routes>
           <Outlet />
         </main>

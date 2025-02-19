@@ -24,7 +24,7 @@
     line-height: 1.7;
     color: #5c5c5c; /* Gris más suave para mayor contraste */
     margin: 15px 0;
-    text-align: justify;
+    text-align: center;
     max-width: 900px; /* Limitar el ancho para mejorar la legibilidad */
     margin-left: auto;
     margin-right: auto;

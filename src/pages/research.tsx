@@ -8,11 +8,10 @@ const Research: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string | null>(null);
 
   const sections = [
-    { title: 'Introducción', path: 'introduction', description: 'Conoce el contexto y los objetivos principales del proyecto AlphaBraille.' },
-    { title: 'Metodología', path: 'methodology', description: 'Descubre los métodos y enfoques utilizados para el desarrollo del dispositivo.' },
-    { title: 'Resultados', path: 'results', description: 'Explora los resultados obtenidos durante las pruebas de campo.' },
-    { title: 'Conclusiones', path: 'conclusions', description: 'Revisa las conclusiones y aprendizajes clave del proyecto.' },
-    { title: 'Referencias', path: 'references', description: 'Consulta las fuentes de información y estudios utilizados en la investigación.' }
+    { title: 'Metodología', path: 'methodology'},
+    { title: 'Resultados', path: 'results'},
+    { title: 'Conclusiones', path: 'conclusions'},
+    { title: 'Referencias', path: 'references'}
   ];
 
   const handleCardClick = (path: string) => {
@@ -38,7 +37,6 @@ const Research: React.FC = () => {
             onClick={() => handleCardClick(section.path)}
           >
             <h2>{section.title}</h2>
-            <p>{section.description}</p>
           </Link>
         ))}
       </div>
