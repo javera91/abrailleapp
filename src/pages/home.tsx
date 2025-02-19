@@ -71,7 +71,6 @@ const Home: React.FC = () => {
           </figure>
           <figure>
             <img src="src/assets/p3.png" alt="Part3" className="gallery-img"/>
-            {/*<figcaption>Feedback directo de los usuarios.</figcaption>*/}
           </figure>
         </div>
       </section>
